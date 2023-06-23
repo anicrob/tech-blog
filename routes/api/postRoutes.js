@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const withAuth = require('../../utils/auth');
-const {createNewPost, updatePost} = require('../../controllers/PostController')
+const withAuth = require('../../middleware/auth');
+const {createNewPost, updatePost, deletePost} = require('../../controllers/PostController')
 
 //create a new post
 router.post('/', withAuth, createNewPost);

@@ -7,7 +7,7 @@ module.exports = {
             include: [
               {
                 model: User,
-                attributes: ["name"],
+                attributes: ["username"],
               },
             ],
           });
@@ -29,7 +29,7 @@ module.exports = {
             include: [
               {
                 model: User,
-                attributes: ["name"],
+                attributes: ["username"],
               },
             ],
           });
@@ -75,6 +75,6 @@ module.exports = {
             res.redirect('/profile');
             return;
             }
-        res.render('signup')
+        res.render('signup');
     }
 }

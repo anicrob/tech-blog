@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
+const withAuth = require('../../middleware/auth');
 const {getAllPosts, getOnePost, getMyPosts, logIn, signIn} = require('../../controllers/PageController');
 
 //render homepage and get all posts w/ user data

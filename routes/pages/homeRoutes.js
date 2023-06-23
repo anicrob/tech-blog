@@ -1,21 +1,20 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const {getAllPosts, getOnePost, getMyPosts, logIn} = require('../../controllers/PostController');
-const { createNewUser } = require('../../controllers/UserController');
+const {getAllPosts, getOnePost, getMyPosts, logIn, signIn} = require('../../controllers/PageController');
 
-//get all posts w/ user data
+//render homepage and get all posts w/ user data
 router.get('/', getAllPosts);
 
-//get single post by id
+//render post page with single post by id
 router.get('/post/:id', getOnePost);
 
-// Use withAuth middleware to prevent access to route
+// render profile page and Use withAuth middleware to prevent access to route with user's posts data
 router.get('/profile', withAuth, getMyPosts);
 
-//login or if already logged in, send to '/profile' route
+//if not logged in, send to login page, or if already logged in, send to '/profile' route
 router.get('/login', logIn);
 
-//sign up
-router.get('/signup', createNewUser)
+//send to sign in page 
+router.get('/signup', signIn)
 
 module.exports = router;

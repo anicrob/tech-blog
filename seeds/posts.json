@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Why React is better than handlebars",
+      "content": "React allows you to dynamically loop through code, but handlebars requires you to refresh the entire page. Not cool!",
+      "user_id": 1
+    },
+    {
+      "title": "My journey from zero to coding hero",
+      "content": "Before joining this coding bootcamp, I knew very little about coding although I was already in the tech industry. Now I know a ton",
+      "user_id": 2
+    },
+    {
+      "title": "Poll: Front-End or Back-end?",
+      "content": "Many developers are full-stack developers, but if we are honest with ourselves, every developer has a favorite. Comment below if you prefer working on front-end or back-end code!",
+      "user_id": 3
+    }
+  ]

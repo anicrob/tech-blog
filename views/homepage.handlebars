@@ -1,9 +1,13 @@
 <!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
+{{#if logged_in}}
 <a href="post/{{post.id}}">
+{{/if}}
   <div>
     <p>{{post.title}}</p>
     <p>Posted by {{post.user.username}} on {{post.created_date}}</p>
   </div>
+{{#if logged_in}}
 </a>
+{{/if}}
 {{/each}}

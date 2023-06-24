@@ -29,9 +29,9 @@ const sessionConfig = {
     db: sequelize
   })
 };
-app.use(routes);
 
 app.use(session(sessionConfig));
+app.use(routes);
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);

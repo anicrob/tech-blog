@@ -17,8 +17,25 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.card-header-color {
+  background-color: deeppink;
+  color: white;
+}
+.is-pink{
+  color:deeppink;
+}
+.height{
+  line-height: 50px;
+}
+.gray-background{
+  background-color: #e7e4e4;
+}
+.is-turquoise{
+  color: #00d1b2;
+}
+.pink-border{
+  border-color: deeppink;
+}
+.turquoise-border{
+  border-color:#00d1b2
 }

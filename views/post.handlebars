@@ -1,11 +1,21 @@
-<div>
-<header>{{post.title}}</header>
-{{post.content}}
-<button>Add Comment</button>
+<div class="card">
+  <header class="card-header card-header-color">
+    <p class="card-header-color">
+      {{post.title}}
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+{{post.content}}      
+    </div>
+  </div>
+  <div>    
+    <button class="is-small ml-1 mb-1 is-primary is-rounded button add-comment-btn"> + Comment</button>
+</div>
+
 </div>
 {{#each post.comment as |comment|}}
 <div>
 <header>Posted by: {{comment.user.username}}</header>
 <p>{{comment.content}}</p>
-</div>
 {{/each}}

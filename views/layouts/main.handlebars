@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
   <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -13,17 +14,35 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
      
-     <nav>
-      <img src="../../Assets/tech-blog-logo.png"/>
-      <h1>
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/login">Login</a>
-        {{#if logged_in}} 
-        <a href="/logout">Logout</a>
-        {{/if}}
-      </h1>
-      </nav> 
+     <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="../../public/tech-blog-logo.jpg" width="112" height="28">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href= "/" class="navbar-item is-pink">
+        Home
+      </a>
+
+      <a href="/dashboard" class="navbar-item is-pink">
+        Dashboard
+      </a>
+         <a href="/login" class="navbar-item is-pink">
+        Login
+      </a>
+      {{#if logged_in}} 
+      <a href="/" class="navbar-item logout is-pink">
+        Logout
+      </a>
+      {{/if}}
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
@@ -36,8 +55,9 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}} 
-  <script src="/js/logout.js"></script>
+  <script src="../../public/js/logout.js"></script>
   {{/if}}
+  <script src="../../public/js/login.js" type="text/javascript"></script>
 </body>
 
 </html>

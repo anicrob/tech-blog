@@ -24,7 +24,7 @@ const createPost = async (event) => {
 
 const updatePost = async (event) => {
     event.preventDefault();
-    event.stopPropagation()
+    event.stopPropagation();
 
     const title = document.querySelector("#create-post-title").value.trim();
     const content = document.querySelector("#create-post-content").value.trim();
@@ -47,7 +47,7 @@ const updatePost = async (event) => {
 //delete post buttons
 const deletePost = async (event) => {
     event.preventDefault();
-    event.stopPropagation()
+    event.stopPropagation();
   
     const id = document.querySelector('#delete-post').getAttribute('data-post-id')
     

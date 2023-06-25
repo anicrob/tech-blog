@@ -90,7 +90,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       include: [{ model: Post }],
     });
 
-    const user = userData.get({ plain: true });
+    const user = userData.map((user) => user.get({ plain: true }));
     console.log(user)
     res.render('dashboard', {
       ...user,

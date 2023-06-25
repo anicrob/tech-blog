@@ -18,11 +18,11 @@ header, .project:not(:last-child) {
 }
 
 .card-header-color {
-  background-color: deeppink;
+  background-color: #eb6567;
   color: white;
 }
 .is-pink{
-  color:deeppink;
+  color:#eb6567;
 }
 .height{
   line-height: 50px;
@@ -31,11 +31,16 @@ header, .project:not(:last-child) {
   background-color: #f0ecec;
 }
 .is-turquoise{
-  color: #00d1b2;
+  color: #85d4e1;
+  font-weight:bolder;
 }
 .pink-border{
-  border-color: deeppink;
+  border-color: #eb6567;
 }
 .turquoise-border{
-  border-color:#00d1b2
+  border-color:#85d4e1;
+}
+.blog-post{
+  background-color: #f8c972;
+  color:#000;
 }

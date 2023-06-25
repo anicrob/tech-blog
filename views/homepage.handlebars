@@ -2,14 +2,10 @@
 
 <!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
-{{!-- {{#if logged_in}} --}}
 <a href="post/{{post.id}}">
-{{!-- {{/if}} --}}
-  <header class="card-header p-2 my-4 is-pink is-justify-content-space-between height gray-background">
+  <header class="card-header blog-post p-2 my-4  is-justify-content-space-between height ">
     <div>{{post.title}}</div>
     <div>Posted by {{post.user.username}} on {{format_date post.date_created}}</div>
   </header>
-{{!-- {{#if logged_in}} --}}
 </a>
-{{!-- {{/if}} --}}
 {{/each}}

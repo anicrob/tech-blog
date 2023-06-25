@@ -1,10 +1,11 @@
-</div>
-{{#each user.posts as |post|}}
+
+<div class="is-size-1	is-turquoise">My Dashboard</div>
+{{#each posts as |post|}}
 <a href="edit/{{post.id}}">
-<div class="text-center">
-  <p>{{post.title}}</p>
-  <p>{{format_date post.date_created}}</p>
-</div>
+  <header class="card-header blog-post p-2 my-4 is-justify-content-space-between height">
+    <div>{{post.title}}</div>
+    <div>{{format_date post.date_created}}</div>
+  </header>
 </a>
 {{/each}}
 </div>

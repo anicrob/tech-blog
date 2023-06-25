@@ -1,14 +1,29 @@
-<div>
-    <header>
-        Edit Post
-    </header>
+<div class="card">
+  <header class="card-header card-header-color">
+    <p class="card-header-color">
+      Edit Post
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
     <form>
-        <label for="eu-post-title">Title</label><br>
-        <input type="text" id="eu-post-title">	{{post.title}}</input>
-        <label for="eu-post-content">Content</label><br>
-        <input type="text" id="eu-post-content">{{post.content}}</input>
+        <label for="eu-post-title" class="is-turquoise">Title</label><br>
+        <input class="textarea is-small" type="text" value="{{post.title}}" id="eu-post-title"></input>
+        <label for="eu-post-content" class="is-turquoise">Content</label><br>
+        <input class="textarea is-medium" type="text" value="{{post.content}}" id="eu-post-content"></input>
+
     </form>
-    <button id= "update-post" data-post-id="{{post.id}}">Update</button>
-    <button id= "delete-post" data-post-id="{{post.id}}">Delete</button>
+    <div class="field is-grouped">
+        <p class="control">
+            <button id= "update-post" data-post-id="{{post.id}}">Update</button>
+        </p>
+        <p class="control">    
+            <button id= "delete-post" data-post-id="{{post.id}}">Delete</button>
+        </p>    
+    </div>
+  </div>
+  <div>    
 </div>
-<script src="js/post.js"></script>
+
+<script src="/js/post.js"></script>
+

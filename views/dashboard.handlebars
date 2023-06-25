@@ -3,7 +3,7 @@
 <a href="edit/{{post.id}}">
 <div class="text-center">
   <p>{{post.title}}</p>
-  <p>{{post.created_date}}</p>
+  <p>{{format_date post.date_created}}</p>
 </div>
 </a>
 {{/each}}

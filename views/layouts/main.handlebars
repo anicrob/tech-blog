@@ -17,7 +17,7 @@
      <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      <img src="../../public/tech-blog-logo.jpg" width="112" height="28">
+      <img src="/tech-blog-logo-2.png" width="100" height="300">
     </a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -52,5 +52,9 @@
       
     </footer>
   </div>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}} 
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
 </html>

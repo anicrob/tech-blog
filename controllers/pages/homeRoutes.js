@@ -29,6 +29,12 @@ router.get('/', async (req, res) => {
     }
   });
 
+  router.get('/create', withAuth, async (req, res) => {
+    res.render("create", {
+      logged_in: req.session.logged_in,
+    });
+  })
+
   //render post page with single post by id
 router.get('/post/:id', async (req, res) => {
   try {

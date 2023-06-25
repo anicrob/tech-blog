@@ -1,5 +1,5 @@
 </div>
-{{#each user.post as |post|}}
+{{#each user.posts as |post|}}
 <a href="edit/{{post.id}}">
 <div class="text-center">
   <p>{{post.title}}</p>
@@ -8,5 +8,5 @@
 </a>
 {{/each}}
 </div>
-<button>+ New Post</button>
-<script src="./js/dashboard.js"></script>
+<a href="/create"><button>+ New Post</button></a>
+<script src="./js/post.js"></script>

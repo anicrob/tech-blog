@@ -9,17 +9,19 @@
   {{content}}      
     </div>
   </div>
-  <div class="add-comment-section">    
+  <div class="add-comment-section">   
+    {{#if logged_in}} 
     <button class="is-small ml-1 mb-1 yellow-button is-rounded button add-comment-btn">Comment</button>
     <div class="send-comment-section hidden">
       <form class="px-3">
         <textarea class="textarea comment-content" placeholder="Write your comment here"></textarea>
         <button class="is-small ml-1 my-1 yellow-button is-rounded button send-comment-btn" data-post-id="{{id}}">Send</button>
       </form>
+       {{/if}}
     </div>
 </div>
 </div>
-<p class="mb-3">Comments:</p>
+<p class="mx-3 mb-3">Comments:</p>
 {{#each comments as |comment|}}
 <div class="display-comment-section">
 <div class="mx-5 card">

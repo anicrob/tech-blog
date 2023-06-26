@@ -12,20 +12,11 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-     
+    <header class="display-flex nav-bar is-justify-content-start align-center p-2">
+         <a class="navbar-item" href="/">
+      <img src="/tech-blog-logo-2.png" width="150" height="300">
+    </a>
      <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img src="/tech-blog-logo-2.png" width="100" height="300">
-    </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <a href= "/" class="navbar-item is-pink">
@@ -35,9 +26,11 @@
       <a href="/dashboard" class="navbar-item is-pink">
         Dashboard
       </a>
-         <a href="/login" class="navbar-item is-pink">
+       {{!-- {{#if !logged_in}}  --}}
+      <a href="/login" class="navbar-item is-pink">
         Login
       </a>
+      {{!-- {{/if}} --}}
       {{#if logged_in}} 
       <a href="/" class="navbar-item logout is-pink">
         Logout

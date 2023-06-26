@@ -34,7 +34,7 @@ router.get("/create", withAuth, async (req, res) => {
 });
 
 //render post page with single post by id
-router.get("/post/:id", withAuth, async (req, res) => {
+router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -53,12 +53,10 @@ router.get("/post/:id", withAuth, async (req, res) => {
       ],
     });
     const post = postData.get({ plain: true });
-    console.log("Homerote post by Id---------", post);
     res.render("post", {
       ...post,
       logged_in: req.session.logged_in,
     });
-    console.log(post);
   } catch (err) {
     res.status(500).json(err);
   }

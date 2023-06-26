@@ -21,7 +21,7 @@ npm i
 
 ## Usage
 
-Be sure to create the database in mysql first, and run npm run seed in your terminal to add the seed data. 
+Be sure to create the database in mysql first (source db/schema.sql), and run npm run seed in your terminal to add the seed data. 
 
 
 

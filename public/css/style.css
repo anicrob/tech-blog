@@ -17,8 +17,12 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.card-header-color {
+.post-header-color {
   background-color: #eb6567;
+  color: white;
+}
+.comment-header-color {
+  background-color: #85d4e1;
   color: white;
 }
 .is-pink{
@@ -43,7 +47,21 @@ header, .project:not(:last-child) {
 .blog-post{
   background-color: #f8c972;
   color:#000;
+  font-weight: bold;
 }
 .hidden{
   display:none;
+}
+.yellow-button{
+  background-color:#f8c972;
+  font-weight: bolder;
+}
+.pink-button{
+  background-color:#eb6567;
+  font-weight: bolder;
+  color:white;
+}
+.sticky{
+  position: sticky; 
+  bottom: 0;  
 }

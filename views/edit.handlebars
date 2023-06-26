@@ -1,6 +1,6 @@
 <div class="card">
-  <header class="card-header card-header-color">
-    <p class="card-header-color">
+  <header class="card-header post-header-color">
+    <p class="post-header-color">
       Edit Post
     </p>
   </header>
@@ -13,12 +13,12 @@
         <input class="textarea is-medium" type="text" value="{{post.content}}" id="ed-post-content"></input>
 
     </form>
-    <div class="field is-grouped">
+    <div class="field is-grouped my-2">
         <p class="control">
-            <button id= "update-post" data-post-id="{{post.id}}">Update</button>
+            <button id= "update-post" class ="is-small ml-1 mb-1 yellow-button is-rounded button" data-post-id="{{post.id}}">Update</button>
         </p>
         <p class="control">    
-            <button id= "delete-post" data-post-id="{{post.id}}">Delete</button>
+            <button id= "delete-post" class ="is-small ml-1 mb-1 yellow-button is-rounded button" data-post-id="{{post.id}}">Delete</button>
         </p>    
     </div>
   </div>

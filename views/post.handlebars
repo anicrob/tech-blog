@@ -1,28 +1,39 @@
 <div class="card">
-  <header class="card-header card-header-color">
-    <p class="card-header-color">
-      {{post.title}}
+  <header class="card-header post-header-color">
+    <p class="post-header-color">
+      {{title}}
     </p>
   </header>
   <div class="card-content">
     <div class="content">
-  {{post.content}}      
+  {{content}}      
     </div>
   </div>
   <div class="add-comment-section">    
-    <button class="is-small ml-1 mb-1 is-primary is-rounded button add-comment-btn">Comment</button>
+    <button class="is-small ml-1 mb-1 yellow-button is-rounded button add-comment-btn">Comment</button>
     <div class="send-comment-section hidden">
-      <form>
+      <form class="px-3">
         <textarea class="textarea comment-content" placeholder="Write your comment here"></textarea>
-        <button class="send-comment-btn" data-post-id="{{post.id}}">Send</button>
+        <button class="is-small ml-1 my-1 yellow-button is-rounded button send-comment-btn" data-post-id="{{id}}">Send</button>
       </form>
     </div>
 </div>
 </div>
-{{#each post.comment as |comment|}}
+<p class="mb-3">Comments:</p>
+{{#each comments as |comment|}}
 <div class="display-comment-section">
-<header>Posted by: {{comment.user.username}}</header>
-<p>{{comment.content}}</p>
+<div class="mx-5 card">
+  <header class="card-header comment-header-color">
+    <p class="comment-header-color">
+      Posted by: {{comment.user_id.username}}    
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <p>{{comment.content}}</p>
+    </div>
+  </div>
 </div>
 {{/each}}
 <script src="/js/comment.js"></script>
+

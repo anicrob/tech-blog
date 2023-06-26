@@ -44,3 +44,6 @@ header, .project:not(:last-child) {
   background-color: #f8c972;
   color:#000;
 }
+.hidden{
+  display:none;
+}

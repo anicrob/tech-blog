@@ -31,7 +31,6 @@ const deletePost = async (event) => {
   
     const id = document.querySelector('#delete-post').getAttribute('data-post-id')
     
-    if (title && content) {
       const response = await fetch(`/api/posts/${id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
@@ -42,7 +41,6 @@ const deletePost = async (event) => {
       } else {
         alert(response.statusText);
       }
-    }
   };
 
 document

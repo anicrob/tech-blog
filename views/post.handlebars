@@ -6,16 +6,23 @@
   </header>
   <div class="card-content">
     <div class="content">
-{{post.content}}      
+  {{post.content}}      
     </div>
   </div>
-  <div>    
-    <button class="is-small ml-1 mb-1 is-primary is-rounded button add-comment-btn"> + Comment</button>
+  <div class="add-comment-section">    
+    <button class="is-small ml-1 mb-1 is-primary is-rounded button add-comment-btn">Comment</button>
+    <div class="send-comment-section hidden">
+      <form>
+        <textarea class="textarea comment-content" placeholder="Write your comment here"></textarea>
+        <button class="send-comment-btn" data-post-id="{{post.id}}">Send</button>
+      </form>
+    </div>
 </div>
-
 </div>
 {{#each post.comment as |comment|}}
-<div>
+<div class="display-comment-section">
 <header>Posted by: {{comment.user.username}}</header>
 <p>{{comment.content}}</p>
+</div>
 {{/each}}
+<script src="/js/comment.js"></script>

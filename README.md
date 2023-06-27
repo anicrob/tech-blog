@@ -33,4 +33,4 @@ Code created by anicrob with architecture assistance from UNC tutors.
 
 Repo: https://github.com/anicrob/tech-blog
 
-Heroku: 
+Heroku: https://amazing-tech-blog-4018313cc943.herokuapp.com/

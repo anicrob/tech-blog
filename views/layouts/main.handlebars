@@ -26,14 +26,13 @@
       <a href="/dashboard" class="navbar-item is-pink">
         Dashboard
       </a>
-       {{!-- {{#if !logged_in}}  --}}
-      <a href="/login" class="navbar-item is-pink">
-        Login
-      </a>
-      {{!-- {{/if}} --}}
-      {{#if logged_in}} 
+       {{#if logged_in}} 
       <a href="/" class="navbar-item logout is-pink">
         Logout
+      </a>
+      {{else}}
+      <a href="/login" class="navbar-item is-pink">
+        Login
       </a>
       {{/if}}
     </header>

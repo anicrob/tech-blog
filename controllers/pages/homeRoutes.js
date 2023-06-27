@@ -5,7 +5,7 @@ const { User, Post, Comment } = require("../../models");
 //render homepage and get all posts w/ user data
 router.get("/", async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all posts and JOIN with user data
     const PostData = await Post.findAll({
       include: [
         {
@@ -27,6 +27,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//render create page
 router.get("/create", withAuth, async (req, res) => {
   res.render("create", {
     logged_in: req.session.logged_in,
@@ -38,11 +39,13 @@ router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
+        //this is to see which user created the post
         {
           model: User,
           attributes: ["username"],
         },
         {
+          //include the User data to see which user created the comment
           model: Comment,
           include: [
             {
@@ -62,6 +65,7 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
+//render edit page by id
 router.get("/edit/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -106,7 +110,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
-//if not logged in, send to login page, or if already logged in, send to '/profile' route
+//if not logged in, send to login page, or if already logged in, send to '/dashboard' route
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -117,7 +121,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-//send to sign in page
+//send to signup page
 router.get("/signup", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/profile");

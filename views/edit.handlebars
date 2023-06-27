@@ -1,3 +1,4 @@
+{{!-- edit page --}}
 <div class="card">
   <header class="card-header post-header-color">
     <p class="post-header-color">
@@ -13,6 +14,7 @@
         <input class="textarea is-medium" type="text" value="{{post.content}}" id="ed-post-content"></input>
 
     </form>
+    {{!-- have post id on the update and delete buttons to use for PUT/DELETE methods in JS --}}
     <div class="field is-grouped my-2">
         <p class="control">
             <button id= "update-post" class ="is-small ml-1 mb-1 yellow-button is-rounded button" data-post-id="{{post.id}}">Update</button>

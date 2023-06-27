@@ -1,4 +1,4 @@
-//create post
+//create post and redirect to dashboard when complete
 const createPost = async (event) => {
     event.preventDefault();
   
@@ -19,6 +19,7 @@ const createPost = async (event) => {
       }
     }
   };
+  //event listener
   document
-  .querySelector("#create-post-btn")
-  .addEventListener("click", createPost);
+    .querySelector("#create-post-btn")
+    .addEventListener("click", createPost);

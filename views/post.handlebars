@@ -1,3 +1,4 @@
+{{!-- single post page --}}
 <div class="card">
   <header class="card-header post-header-color">
     <p class="post-header-color">
@@ -10,6 +11,7 @@
     </div>
   </div>
   <div class="add-comment-section">   
+    {{!-- make the comment button visibility/rendering conditional to if the user is logged in or not --}}
     {{#if logged_in}} 
     <button class="is-small ml-1 mb-1 yellow-button is-rounded button add-comment-btn">Comment</button>
     <div class="send-comment-section hidden">
@@ -22,6 +24,7 @@
 </div>
 </div>
 <p class="mx-3 mb-3">Comments:</p>
+{{!-- for each comment, render this code --}}
 {{#each comments as |comment|}}
 <div class="display-comment-section">
 <div class="mx-5 card">

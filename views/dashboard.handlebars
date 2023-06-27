@@ -1,8 +1,9 @@
+{{!-- dashboard page --}}
 <div class="is-flex is-flex-direction-row is-align-items-center	is-justify-content-space-between	">
   <p class="is-size-1	is-turquoise">My Dashboard</p>
   <a href="/create"><button class="is-medium ml-1 mb-1 pink-button is-rounded button">+ New Post</button></a>
 </div>
-
+{{!-- for each post, render this code --}}
 {{#each posts as |post|}}
 <a href="edit/{{post.id}}">
   <header class="card-header blog-post p-2 my-4 is-justify-content-space-between height">

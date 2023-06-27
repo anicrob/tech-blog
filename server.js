@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({helpers});
 
-
+//set up session time out with maxAge on cookie
 const sessionConfig = {
   secret: process.env.SECRET,
   cookie: {

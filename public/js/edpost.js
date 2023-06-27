@@ -1,6 +1,4 @@
-
-
-//update post
+//update post and redirect to dashboard
 
 const updatePost = async (event) => {
     event.preventDefault();
@@ -24,7 +22,8 @@ const updatePost = async (event) => {
       }
     }
   };
-//delete post buttons
+
+//delete post and redirect to dashboard
 const deletePost = async (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -43,6 +42,7 @@ const deletePost = async (event) => {
       }
   };
 
+  //event listeners
 document
     .querySelector('#update-post')
     .addEventListener("click", updatePost);
